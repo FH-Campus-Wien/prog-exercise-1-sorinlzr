@@ -4,54 +4,149 @@ import java.util.Scanner;
 
 public class App {
 
-    //todo Task 1
     public void sayHelloWorld(){
-        // input your solution here
+        System.out.println("Hello World!");
     }
 
-    //todo Task 2
     public void helloRobot(){
-        // input your solution here
+        System.out.println("0123456789012345678901\r\n" +
+                "         __\r\n" +
+                " _(\\    |@@|\r\n" +
+                "(__/\\__ \\--/ __\r\n" +
+                "   \\___|----|  |   __\r\n" +
+                "       \\ }{ /\\ )_ / _\\\r\n" +
+                "       /\\__/\\ \\__O (__\r\n" +
+                "      (--/\\--)    \\__/\r\n" +
+                "      _)(  )(_\r\n" +
+                "     `---''---`");
     }
 
-    //todo Task 3
     public void sumOfLiterals(){
-        // input your solution here
+        final char numChar = 'Z';
+        final int numHex = 0xface;
+        final int numOctal = 012;
+        final long numLong = 80L;
+        final float numFloatExp = 44e-1f;
+        final float numFloat = 5.5f;
+        final double numDoubleExp = 8.88e1;
+        final double numDouble = 99.9;
+
+        int sum = (int) numChar + numHex + numOctal + (int) numLong
+                + (int) numFloatExp + (int) numFloat + (int) numDoubleExp + (int) numDouble;
+        System.out.println(sum);
     }
 
-    //todo Task 4
     public void addTwoNumbers(){
-        // input your solution here
+        Scanner scan = new Scanner(System.in);
+        int a = scan.nextInt();
+        int b = scan.nextInt();
+        System.out.println(a+b);
     }
 
-    //todo Task 5
     public void swapTwoNumbers(){
-        // input your solution here
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Before Swap:");
+        System.out.print("x: ");
+        int x = scan.nextInt();
+
+        System.out.print("y: ");
+        int y= scan.nextInt();
+
+        x = x ^ y;
+        y = y ^ x;
+        x = x ^ y;
+
+        System.out.println("After Swap:");
+        System.out.println("x: " + x);
+        System.out.println("y: " + y);
+
     }
 
     //todo Task 6
     public void compareTwoNumbers(){
-        // input your solution here
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("n1: ");
+        int n1 = scan.nextInt();
+
+        System.out.print("n2: ");
+        int n2 = scan.nextInt();
+
+        if (n1 > n2) System.out.println("n1 > n2");
+        if (n2 > n1) System.out.println("n2 > n1");
+        if (n1 == n2) System.out.println("n1 == n2");
     }
 
-    //todo Task 7
     public void ratingSalesPerson(){
-        // input your solution here
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Enter annual Revenue: ");
+        int revenue = scan.nextInt();
+
+        if (revenue < 0 || revenue >= 100000) {
+            System.out.println("Invalid Revenue");
+        } else if (revenue < 20000) {
+            System.out.println("Poor Sales Revenue");
+        } else if (revenue < 50000) {
+            System.out.println( "Average Sales Revenue");
+        } else if (revenue < 80000) {
+            System.out.println("Good Sales Revenue");
+        } else {
+            System.out.println("Excellent Sales Revenue");
+        }
     }
 
-    //todo Task 8
     public void getCommissionRate(){
-        // input your solution here
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Enter CommissionClass: ");
+        int commissionClass = scan.nextInt();
+        double provision;
+
+        switch (commissionClass) {
+            case (1):
+                provision = 0.01;
+                break;
+            case (2):
+                provision = 0.02;
+                break;
+            case (3):
+                provision = 0.03;
+                break;
+            case (4):
+                provision = 0.04;
+                break;
+            default:
+                provision = 0.00;
+        }
+        System.out.println("Your Commission Rate was set to " + provision);
     }
 
-    //todo Task 9
     public void leapyear(){
-        // input your solution here
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Year: ");
+        int year = scan.nextInt();
+
+        if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+            System.out.println("Leapyear");
+        } else {
+            System.out.println("Not a Leapyear");
+        }
     }
 
     //todo Task 10
     public void transposedNumbers(){
-        // input your solution here
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Number: ");
+        int number = scan.nextInt();
+
+        if (number > 999) return;
+
+        int res = number % 10 * 100 + number / 10 % 10 * 10 + number / 100;
+        System.out.println(res);
     }
 
 
