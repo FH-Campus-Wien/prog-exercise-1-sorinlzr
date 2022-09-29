@@ -9,15 +9,15 @@ public class App {
     }
 
     public void helloRobot(){
-        System.out.println("0123456789012345678901\r\n" +
-                "         __\r\n" +
-                " _(\\    |@@|\r\n" +
-                "(__/\\__ \\--/ __\r\n" +
-                "   \\___|----|  |   __\r\n" +
-                "       \\ }{ /\\ )_ / _\\\r\n" +
-                "       /\\__/\\ \\__O (__\r\n" +
-                "      (--/\\--)    \\__/\r\n" +
-                "      _)(  )(_\r\n" +
+        System.out.println("0123456789012345678901" + System.lineSeparator() +
+                "         __" + System.lineSeparator() +
+                " _(\\    |@@|" + System.lineSeparator() +
+                "(__/\\__ \\--/ __" + System.lineSeparator() +
+                "   \\___|----|  |   __" + System.lineSeparator() +
+                "       \\ }{ /\\ )_ / _\\" + System.lineSeparator() +
+                "       /\\__/\\ \\__O (__" + System.lineSeparator() +
+                "      (--/\\--)    \\__/" + System.lineSeparator() +
+                "      _)(  )(_" + System.lineSeparator() +
                 "     `---''---`");
     }
 
